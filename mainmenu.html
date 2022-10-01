@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Airsoft Miskolc</title>
+    <link rel="stylesheet" href="css/mainmenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="nav" id="myTopnav">
+    <div class="logo">
+        <img src="img/Fegyver-logo2.jpg">
+    </div>
+    <a href="javascript:void(0);" class="ikon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="nav_elements">
+        <a class="active" href="mainmenu.html">Főoldal</a>
+        <a href="airsoft.html">Airsoft fegyverek</a>
+        <a href="attachments.html">Kiegészítők</a>
+        <a href="alkatresz.html">Alkatrészek</a>
+        <a href="rolam.html">Rólam</a>
+    </div>
+  </div>
+  
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="img/AK2.jpg" style="width:100%">
+      <div class="text" style="color: brown;">Fegyverek széles választékban!</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/Magyar Honvedseg2.jpg" style="width:100%">
+      <div class="text" style="color: khaki;">Játsz ahogy a profik</div> 
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/Sniper2.jpg" style="width:100%">
+      <div class="text" style="color: olive;">Légy körültekintő</div>
+    </div>
+      <div class="slideshow-nav">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="container-cards">
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-question" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Információk</h3>
+              <p>Tudj meg többet rólunk!</p>
+              <a class="box-link" href="rolunk.html">Olvass tovább</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Keresés</h3>
+              <p>Nézz szét nálunk!</p>
+              <a class="box-link" href="mesterek.html">Olvass tovább</a>
+          </div>
+      </div>
+
+      <div class="box">
+          <div class="icon">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          </div>
+          <div class="content">
+              <h3>Áruház</h3>
+              <p>Széles kínálatokkal várunk!</p>
+              <a class="box-link" href="bolt.html">Olvass tovább</a>
+          </div>
+      </div>
+  </div>
+
+<script>
+      function myFunction() {
+            var x=document.getElementById("myTopnav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+      }
+
+      var slideIndex = 0;
+      showSlides();
+      function currentSlide(n) {
+        showSlides(slideIndex=n);
+      }
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000);
+      }
+</script>
+</body>
+</html>
