@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body{
+    background-image: url("../img/Desert\ terep.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+.nav{
+    overflow: hidden;
+    background-color: #356600;
+}
+
+.nav a{
+    float: right;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px 16px;
+    color: #802900;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: black;
+}
+
+.nav a.active{
+    background-color: #675724;
+}
+
+.logo img{
+    margin: 5px 10px;
+    width: 45px;
+    float: left;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    opacity: 0.4;
+}
